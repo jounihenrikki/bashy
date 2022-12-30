@@ -89,6 +89,8 @@ Configuration files in _~/.config_
   
   Project is under GNU General Public License (GPLv3), https://www.gnu.org/licenses/gpl-3.0.html
 
+  Thanks to my employer Telia https://www.teliacompany.com/ for Letting me publish this!
+
 **Other work built on bashy, possibly to be published later**
 
   alarmdb       File-based alarm database with smart email notifications etc.
