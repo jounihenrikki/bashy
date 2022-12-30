@@ -17,19 +17,19 @@ Bashy uses best practice error handling options: 'set -o errexit -o errtrace -o 
 
 **Long options**
 
-Source 'setopt' library to support strongly typed long command line options and option arguments. Common options like --help are handled automatically.
+Library setopt.bash supports strongly typed long command line options and option arguments. Common options like --help are handled automatically.
 
 **Command completion**
 
-With 'complete' library, supports automatic command completion for command line options, option arguments and user-defined words. Script 'compreg' can rebuild source files with complete commands for login scripts.
+Library complete.bash supports automatic command completion for command line options, option arguments and user-defined words. Script 'compreg' can rebuild source files with complete commands for login scripts.
 
 **Debugging**
 
-Source 'setopt' library to support generic --debug command line option. Debug domain and debug layers are typically set in library source files. Functions: lib.debug-register (function lib.debug is for ad-hoc debugging).
+Library setopt.bash supports generic --debug command line option. Debug domain and debug layers are typically set in library source files. Functions: lib.debug-register.
 
 **Housekeeping**
 
-Pseudo-signal EXIT is trapped to call function lib.cleanup() on exit. User can register additional functions to be run by lib.cleanup(). Automatic cleanup is used by 'bunique' and 'mutex' libraries.
+Pseudo-signal EXIT is trapped to call function lib.cleanup() on exit. Script or library can register additional functions to be run by lib.cleanup(). Automatic cleanup is used for example by 'bunique' and 'mutex' libraries.
 
 
 **Files**
