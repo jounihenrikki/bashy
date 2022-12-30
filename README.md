@@ -62,20 +62,22 @@ Executable files - in _~/.local/bin_ - if moved, must be in PATH
 
 Configuration files in _~/.config_
 
-    bashrc
-      Login source file (source this from ~/.bashrc)
-
-    bashrc.d/1complete.bash
-      Runs compreg to rebuild source files in ~/.config/complete.d/ and sources them. sourced by ~/.config/bashrc
-
-    complete.d/*.bash
+    .config/complete.d/*.bash
       Command complation source files built by compreg
 
-    color.bash/color-names
+    .config/color.bash/color-names
       Color data for color.bash functions
 
-    search/defaults.setopt
+    .config/search/defaults.setopt
       Defaults command line options for search script
+
+Login scripts. I you choose not to use these as I do, copy the content of 1complete.bash to your ~/.bashrc
+
+    .config/bashrc
+      Login source file (source this from ~/.bashrc). I source this also for non-interactive shells (e.g. run by cron) by setting BASH_ENV.
+
+    .config/bashrc.d/1complete.bash
+      All .bash files in the directory are sourced by .config/bashrc. 1complete.bash runs compreg to rebuild source files in ~/.config/complete.d/ and sources them.
 
 **Dependencies and requirements**
 
