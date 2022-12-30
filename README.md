@@ -88,7 +88,9 @@ Configuration files in ~/.config
 **Copyright**
 
   2022 Jouni Henrikki Vääriskoski,
+  
   mailto:?to=jouni.vaariskoski@gmail.com&subject=Bash%20scripting&body=Hi%20Jouni,%20the%20Bash%20wizard,
+  
   Project is under GNU General Public License (GPLv3), https://www.gnu.org/licenses/gpl-3.0.html
 
 **Other work built on Bashy, possibly to be published later**
