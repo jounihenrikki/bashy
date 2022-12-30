@@ -1,5 +1,7 @@
 # bashy
-Personal and portable Bash scripting environment with useful features built in
+Personal and portable Bash scripting environment with useful built-in features
+
+https://www.urbandictionary.com/define.php?term=bashy
 
 **Libraries**
 
@@ -32,9 +34,9 @@ Pseudo-signal EXIT is trapped to call function lib.cleanup() on exit. User can r
 
 **Files**
 
-Main source file bashy.bash must be in PATH, and other .bash libraries must be in same directory, so for simplicity they are all in ~/.local/bin.
+Main source file bashy.bash must be in PATH, and other .bash libraries in turn must be in same directory. For simplicity they are with the executables.
 
-Bash source files - bashy libraries - in ~/.local/bin
+Bash source files - bashy libraries - in _~/.local/bin_
 
     bashy.bash        main source file library
     skeleton.bash     library file template
@@ -46,44 +48,38 @@ Bash source files - bashy libraries - in ~/.local/bin
     mutex.bash        functions for mutual exclusion based on lock files
     validate.bash     datatype validation functions
 
-Executable files in ~/.local/bin (must be in PATH)
+Executable files - in _~/.local/bin_ - if moved, must be in PATH
 
     bashy-eval        supports testing libraries interactively
     bashy-help        prints help on Bashy libraries
     color-cubes       displays color palettes, demo for color.bash
     compreg           builds source files for command line completion
-    logadm            log management
+    logadm            log management and housekeeping
     logs              log browser
     search            text search and replace tool
     skeleton          creates skeleton 'bashy-compatible' script
     viconfig          helps in editing configuration files
 
-Configuration files in ~/.config
+Configuration files in _~/.config_
 
     bashrc
-      login source file (source from ~/.bashrc)
+      Login source file (source this from ~/.bashrc)
 
     bashrc.d/1complete.bash
-      runs compreg to rebuild source files in ~/.config/complete.d/ and sources
-      them. sourced by ~/.config/bashrc
+      Runs compreg to rebuild source files in ~/.config/complete.d/ and sources them. sourced by ~/.config/bashrc
 
     complete.d/*.bash
-      command complation source files built by compreg
+      Command complation source files built by compreg
 
     color.bash/color-names
-      color data for color.bash functions
+      Color data for color.bash functions
 
     search/defaults.setopt
-      defaults command line options for search script
+      Defaults command line options for search script
 
 **Dependencies and requirements**
 
   Bash 4.3 or higher required. Path ~/.local/bin must be in search PATH.
-
-**Housekeeping**
-
-  Log file housekeeping is handled by 'logadm --housekeeping'. If you have enabled logs (by script or library name), schedule command in cron or run it
-  every now and then.
 
 **Copyright**
 
@@ -93,7 +89,7 @@ Configuration files in ~/.config
   
   Project is under GNU General Public License (GPLv3), https://www.gnu.org/licenses/gpl-3.0.html
 
-**Other work built on Bashy, possibly to be published later**
+**Other work built on bashy, possibly to be published later**
 
   alarmdb       File-based alarm database with smart email notifications etc.
   cronguard     Runs commands in crontab in smart way (requires alarmdb)
