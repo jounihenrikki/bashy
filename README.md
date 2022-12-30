@@ -81,15 +81,15 @@ Configuration files in _~/.config_
 
   Bash 4.3 or higher required. Path ~/.local/bin must be in search PATH.
 
-**Copyright**
+**Author**
 
-  2022 Jouni Henrikki Vääriskoski,
+  Jouni Henrikki Vääriskoski (jounihenrikki)
   
   mailto:?to=jouni.vaariskoski@gmail.com&subject=Bash%20scripting&body=Hi%20Jouni,%20the%20Bash%20wizard,
   
   Project is under GNU General Public License (GPLv3), https://www.gnu.org/licenses/gpl-3.0.html
 
-  Thanks to my employer Telia https://www.teliacompany.com/ for Letting me publish this!
+  Thanks to my employer Telia https://www.teliacompany.com/ for letting me publish this core package.
 
 **Other work built on bashy, possibly to be published later**
 
