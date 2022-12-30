@@ -5,7 +5,7 @@ https://www.urbandictionary.com/define.php?term=bashy
 
 **Libraries**
 
-Script can source all required .bash libraries with single command together with main library bashy.bash. Neẇ libraries can be created using a template.
+Scripts can source all required .bash libraries with single command together with main library bashy.bash. Neẇ libraries can be created using a template.
 
 **Logging and output**
 
