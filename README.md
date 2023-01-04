@@ -1,5 +1,5 @@
 # bashy
-Personal and portable Bash scripting environment with useful built-in features
+Personal Bash scripting environment with useful built-in features
 
 https://www.urbandictionary.com/define.php?term=bashy
 
