@@ -74,10 +74,9 @@ Login scripts. I you choose not to use these as I do, copy the content of 1compl
 Bash 4.3 or higher required. Path ~/.local/bin must be in search PATH.
 
 ## Author
-Jouni Henrikki Vääriskoski (jounihenrikki)  
-mailto:?to=jouni.vaariskoski@gmail.com&subject=Bash%20scripting&body=Hi%20Jouni,%20the%20Bash%20wizard,  
-Project is under GNU General Public License (GPLv3), https://www.gnu.org/licenses/gpl-3.0.html  
-Thanks to my employer Telia https://www.teliacompany.com/ for letting me publish this core package.  
+[Jouni Henrikki Vääriskoski](mailto:?to=jouni.vaariskoski@gmail.com&subject=Bash%20scripting&body=Hi%20Jouni,)  
+Project is under GNU General Public License [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)  
+Thanks to my employer [Telia](https://www.teliacompany.com/) for letting me publish this core package.  
 
 ## Other work built on bashy, possibly to be published later
 
