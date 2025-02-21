@@ -5,7 +5,7 @@ Tiny yet powerful Bash scripting environment for greater productivity
 
 Bashy was developed to help manage appliances in isolated environments by a guy who had nothing but command shell in his toolbox.
 Over the years Bashy has become a crown jewel in the box, demonstrating many of the fine capabilities of Bash.
-Please feel free to bring in your ideas and help in testing the scripts.
+Please feel free to bring in your ideas and help in testing the scripts. I hope you also find some to it.
 
 This bashy-core package is the minimun set of files, the platform to build scripts on.
 Plus some extras for demonstration and inspiration.
