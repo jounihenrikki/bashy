@@ -105,5 +105,6 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
 # Dependencies and requirements
 Bash 4.3 or higher required. Path ~/.local/bin must be in search PATH.
 # Author
+https://github.com/jounihenrikki/bashy/
 [Jouni Henrikki Vääriskoski](mailto:?to=jouni.vaariskoski@gmail.com&subject=Bash%20scripting&body=Hi%20Jouni,)
 Work is under GNU General Public License [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
