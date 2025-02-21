@@ -3,9 +3,9 @@ https://www.urbandictionary.com/define.php?term=bashy
 
 Tiny yet powerful Bash scripting environment for greater productivity
 
-Bashy was developed to help managing isolated appliances by a guy who had nothing but command shell in his toolbox.
-Slowly Bashy became a shiny jewel, demonstrating many of the fine capabilities of Bash.
-The guy lived happily everafter with his toolbox.
+Bashy was developed to help manage appliances in isolated environments by a guy who had nothing but command shell in his toolbox.
+Over the years Bashy has become a crown jewel in the box, demonstrating many of the fine capabilities of Bash.
+Please feel free to bring in your ideas and help in testing the scripts.
 
 This bashy-core package is the minimun set of files, the platform to build scripts on.
 Plus some extras for demonstration and inspiration.
@@ -24,10 +24,10 @@ Best practices for error handling. Bash ERR pseudo signal can trigger backtrace 
 Tools and functions for logging and log housekeeping. All script invocations are logged by default.
 
 ### Debugging
-Generic --debug command line option. Debug options can be registered in library source files or scripts.
+Generic --debug= command line option. Debug options can be registered in library source files or scripts.
 
 ### Housekeeping
-Pseudo signal EXIT is trapped for cleanup functions. Script or library can register functions to be run on exit.
+EXIT pseudo signal is trapped for cleanup functions. Script or library can register functions to be run on exit.
 
 ### Custom libraries
 Scripts can source additional libraries together with main library bashy.bash. A template is provided.
@@ -38,7 +38,7 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
   bashy skeleton myscript; bashyrc.complete-refresh
 
 ## Installation
-1. Extract the package in your home folder: unzip <file>
+1. Extract the package to your home folder with unzip
 2. Run **./bin/bashy-install** or manually add 'source .config/bashyrc' to you .bashrc file
 3. Run **source .config/bashyrc** (or relogin).
 
