@@ -1,7 +1,7 @@
 # Bashy
 https://www.urbandictionary.com/define.php?term=bashy
 
-Tiny but powerful Bash scripting environment for greater productivity
+Tiny yet powerful Bash scripting environment for greater productivity
 
 Bashy was developed to help managing isolated appliances by a guy who had nothing but command shell in his toolbox.
 Slowly Bashy became a shiny jewel, demonstrating many of the fine capabilities of Bash.
@@ -10,7 +10,7 @@ The guy lived happily everafter with his toolbox.
 This bashy-core package is the minimun set of files, the platform to build scripts on.
 Plus some extras for demonstration and inspiration.
 
-# Features
+## Features
 ### Long command line options
 Long command line options with strongly typed option arguments, parsed in normal getopts loop. Common options like --help built in.
 
@@ -30,18 +30,19 @@ Generic --debug command line option. Debug options can be registered in library 
 Pseudo signal EXIT is trapped for cleanup functions. Script or library can register functions to be run on exit.
 
 ### Custom libraries
-Scripts can source additional libraries together with main library bashy.bash. A template is provided for custom libraries.
+Scripts can source additional libraries together with main library bashy.bash. A template is provided.
 
 ### Fast script creation
 Example: create script skeleton ~/bin/myscript and add a compspec for the current shell:
+
   bashy skeleton myscript; bashyrc.complete-refresh
 
-# Installation
+## Installation
 1. Extract the package in your home folder: unzip <file>
 2. Run **./bin/bashy-install** or manually add 'source .config/bashyrc' to you .bashrc file
 3. Run **source .config/bashyrc** (or relogin).
 
-# Content
+## Content
 ### Mandatory login script
     .config/bashyrc
       Source this from ~/.bashrc or let bashy-install to install the hook for it.
@@ -102,9 +103,9 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
 
     .local/bin/viconfig
       Demonstrates command completion to help editing files under ~/config
-# Dependencies and requirements
+## Dependencies and requirements
 Bash 4.3 or higher required. Path ~/.local/bin must be in search PATH.
-# Author
+## Author
 https://github.com/jounihenrikki/bashy/
 [Jouni Henrikki Vääriskoski](mailto:?to=jouni.vaariskoski@gmail.com&subject=Bash%20scripting&body=Hi%20Jouni,)
 Work is under GNU General Public License [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
