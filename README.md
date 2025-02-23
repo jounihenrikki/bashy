@@ -105,6 +105,8 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
       Demonstrates command completion to help editing files under ~/config
 ## Dependencies and requirements
 Bash 4.3 or higher required. Path ~/.local/bin must be in search PATH.
+
+External binaries used: sed(1) to print help texts
 ## Author
 https://github.com/jounihenrikki/bashy/
 [Jouni Henrikki Vääriskoski](mailto:?to=jouni.vaariskoski@gmail.com&subject=Bash%20scripting&body=Hi%20Jouni,)
