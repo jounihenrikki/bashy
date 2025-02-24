@@ -7,9 +7,12 @@ Bashy was developed to help manage appliances in isolated environments. No root 
 This Bashy core package is the minimun set of files, the platform to build scripts on.
 Plus some extras for demonstration and inspiration.
 
+Long command line options and command completion together are the most valuable gift of Bashy.
+I hope they revolutionize the way you see shell scripting. Any furhter ideas and support are welcome.
+
 ## Features
 ### Long command line options
-Long command line options with strongly typed option arguments, parsed in normal getopts loop. Common options like --help built in.
+Long command line options with strongly typed and validated option arguments parsed in normal getopts loop. Common options like --help built in.
 
 ### Command completion
 Automatic completion for command line options, option arguments and positional parameters. No configuration outside scripts is needed.
@@ -18,7 +21,7 @@ Automatic completion for command line options, option arguments and positional p
 Best practices for error handling. Bash ERR pseudo signal can trigger backtrace for debugging.
 
 ### Logging
-Tools and functions for logging and log housekeeping. All script invocations are logged by default.
+Functions for logging and tools for log housekeeping. All script invocations are logged by default.
 
 ### Debugging
 Generic --debug= command line option. Debug options can be registered in library source files or scripts.
@@ -36,13 +39,14 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
 
 ## Installation
 1. Extract the package to your home folder with unzip
-2. Run **./bin/bashy-install** or manually add 'source .config/bashyrc' to you .bashrc file
-3. Run **source .config/bashyrc** (or relogin).
+2. Run **~/.config/bashy/install.sh** or manually add 'source .config/bashyrc' to you .bashrc file
+3. Run **source ~/.config/bashyrc** (or relogin).
 
 ## Content
 ### Mandatory login script
     .config/bashyrc
       Source this from ~/.bashrc or let bashy-install to install the hook for it.
+      Once sourced, brief help can be printed with bashyrc.help command.
 ### Essential executables
     .local/bin/bashy
       For help and templates for scripts and libraries
@@ -51,7 +55,7 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
     .local/bin/bashy-logs
       View and manage Bashy logs
 
-    .local/bin/bashy-install
+    .config/bashy/install.sh
       Install or uninstall Bashy hook in ~/.bashrc
 ### Mandatory source files
     .local/bin/bashy.bash
@@ -73,7 +77,7 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
     .local/bin/color-cubes
     .config/color/color-names
       Demo scripts providing useful information on terminal colors.
-      Enable 256 colors or truecolor in your terminal to see full set color patterns.
+      Enable 256 colors in your terminal to see all color patterns.
 
     .local/bin/array.bash
       Functions for array manipulation
@@ -105,5 +109,5 @@ Bash 4.3 or higher required.
 Path ~/.local/bin must be in $PATH.
 ## Author
 https://github.com/jounihenrikki/bashy/
-[Jouni Henrikki Vääriskoski](mailto:?to=jouni.vaariskoski@gmail.com&subject=Bash%20scripting&body=Hi%20Jouni,)
+[Jouni Henrikki Vääriskoski](mailto:?to=jouni.vaariskoski@gmail.com&subject=Bashy&body=Hi%20Jouni,)
 Work is under GNU General Public License [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
