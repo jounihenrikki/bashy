@@ -4,7 +4,7 @@ https://www.urbandictionary.com/define.php?term=bashy
 Bashy is scripting environment for user-friendly scripts.
 It is also a declaration of new conventions and look-and-feel in shell scripting.
 
-Long command line options and command completion are the most useful features and the soul of Bashy, so look into those first.
+Long command line options with command completion are the most useful features and the soul of Bashy, look into those first.
 
 Bashy-core.zip contains the minimun set of files, the platform to build scripts on. Few additional scripts are added for demonstration and inspiration.
 Scripts are installed under user's home and root access is not required. I have avoided external commands as much as possible so Bashy should be quite portable.
