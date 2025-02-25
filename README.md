@@ -8,7 +8,8 @@ This Bashy core package is the minimun set of files, the platform to build scrip
 Plus some extras for demonstration and inspiration.
 
 Long command line options and command completion together are the most valuable gift of Bashy.
-I hope they revolutionize the way you see shell scripting. Any furhter ideas and support are welcome.
+I believe Bashy has potential of becoming a de facto package for scripting.
+Any ideas and help to support the world conquest are welcome :).
 
 ## Features
 ### Long command line options
