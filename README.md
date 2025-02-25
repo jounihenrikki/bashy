@@ -55,19 +55,20 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
       Once sourced, some help can be printed with bashyrc.help command.
 ### Mandatory source files
     .local/bin/bashy.bash
-      Bashy basic environment and functions
+      Bashy basic environment and functions. See 'bashy help'.
 
     .local/bin/complete.bash
-      Functions for command line completion
+      Functions for command line completion. See 'bashy help complete.bash'
 
     .local/bin/setopt.bash
-      Functions for command line option handling
+      Functions for command line option handling. See 'bashy help setopt.bash.
 
     .local/bin/validate.bash
-      Functions for datatytpe validation, used by setopt.bash
+      Generic functions for datatype validation used also by setopt.bash. See 'bashy help validate.bash'.
 ### Essential executables
     .local/bin/bashy
-      Companion tool for help and templates for scripts and libraries
+      Companion tool for help and templates for scripts and libraries. See 'bashy --help'.
+      Create your first Bashy script with 'bashy skeleton-with-comments myscript'
 
     .local/bin/bashy-logadm
     .local/bin/bashy-logs
@@ -109,7 +110,7 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
     .local/bin/viconfig
       Demonstrates command completion to help editing files under ~/.config
 ## Dependencies and requirements
-Should work with Bash 4.3 or higher.
+Tested with Bash 4.4 and 5.2 but should work with Bash 4.3 or higher.
 Path ~/.local/bin must be in $PATH.
 ## Author
 https://github.com/jounihenrikki/bashy/
