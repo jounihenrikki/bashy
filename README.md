@@ -110,7 +110,7 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
     .local/bin/viconfig
       Demonstrates command completion to help editing files under ~/.config
 ## Dependencies and requirements
-Tested with Bash 4.4 and 5.2 but should work with Bash 4.3 or higher.
+Tested with Bash 4.4 and 5.2.
 Path ~/.local/bin must be in $PATH.
 ## Author
 https://github.com/jounihenrikki/bashy/
