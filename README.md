@@ -1,22 +1,24 @@
 # Bashy
 https://www.urbandictionary.com/define.php?term=bashy
 
-Bash scripting environment for greater productivity
+Bashy is scripting environment for user-friendly scripts.
+It is also a declaration of new conventions and look-and-feel in shell scripting.
 
-Bashy was developed to help manage appliances in isolated environments. No root access is required.
-This Bashy core package is the minimun set of files, the platform to build scripts on.
-Plus some extras for demonstration and inspiration.
+Long command line options and command completion are the most useful features and the soul of Bashy, so look into those first.
 
-Long command line options and command completion together are the most valuable gift of Bashy.
-I believe Bashy has potential of becoming a de facto package for scripting.
+Bashy-core.zip contains the minimun set of files, the platform to build scripts on. Few additional scripts are added for demonstration and inspiration.
+Scripts are installed under user's home and root access is not required. I have avoided external commands as much as possible so Bashy should be quite portable.
+
+Your new scripts are created using a template which provides all you need to start with.
+
 Any ideas and help to support the world conquest are welcome :).
 
 ## Features
 ### Long command line options
-Long command line options with strongly typed and validated option arguments parsed in normal getopts loop. Common options like --help built in.
+Long command line options with strongly typed and validated option arguments parsed in normal getopts loop. Common options like --help are built-in.
 
 ### Command completion
-Automatic completion for command line options, option arguments and positional parameters. No configuration outside scripts is needed.
+Instant completion for command line options, option arguments and positional parameters. No configuration outside scripts is needed.
 
 ### Error handling
 Best practices for error handling. Bash ERR pseudo signal can trigger backtrace for debugging.
@@ -46,18 +48,8 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
 ## Content
 ### Mandatory login script
     .config/bashyrc
-      Source this from ~/.bashrc or let bashy-install to install the hook for it.
-      Once sourced, brief help can be printed with bashyrc.help command.
-### Essential executables
-    .local/bin/bashy
-      For help and templates for scripts and libraries
-
-    .local/bin/bashy-logadm
-    .local/bin/bashy-logs
-      View and manage Bashy logs
-
-    .config/bashy/install.sh
-      Install or uninstall Bashy hook in ~/.bashrc
+      Source this from ~/.bashrc or let 'bashy install' to install the hook.
+      Once sourced, some help can be printed with bashyrc.help command.
 ### Mandatory source files
     .local/bin/bashy.bash
       Bashy basic environment and functions
@@ -70,7 +62,17 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
 
     .local/bin/validate.bash
       Functions for datatytpe validation, used by setopt.bash
-### For demostration and inspiration
+### Essential executables
+    .local/bin/bashy
+      Companion tool for help and templates for scripts and libraries
+
+    .local/bin/bashy-logadm
+    .local/bin/bashy-logs
+      View and manage Bashy logs
+
+    .config/bashy/install.sh
+      Install or uninstall Bashy hook in ~/.bashrc
+### Extras for demostration and inspiration
     .local/bin/color.bash
       Functions for terminal colors. Not mandatory but recommended
       Automatically used by for error prompts etc when exist
@@ -106,7 +108,7 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
     .local/bin/viconfig
       Demonstrates command completion to help editing files under ~/config
 ## Dependencies and requirements
-Bash 4.3 or higher required.
+Should work with Bash 4.3 or higher.
 Path ~/.local/bin must be in $PATH.
 ## Author
 https://github.com/jounihenrikki/bashy/
