@@ -40,6 +40,9 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
 
   bashy skeleton myscript; bashyrc.complete-refresh
 
+### Support for multiple configuration paths
+Inspired by 'XDG Base Directory Specification', multiple configuration base paths are supported
+
 ## Installation
 1. Extract the package to your home folder with unzip
 2. Run **~/.config/bashy/install.sh** or manually add 'source .config/bashyrc' to you .bashrc file
@@ -75,30 +78,28 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
 ### Extras for demostration and inspiration
     .local/bin/color.bash
       Functions for terminal colors. Not mandatory but recommended
-      Automatically used by for error prompts etc when exist
+      Automatically used for error prompts etc. if found
 
     .local/bin/color-cubes
     .config/color/color-names
-      Demo scripts providing useful information on terminal colors.
+      Demo script providing some information on terminal colors.
       Enable 256 colors in your terminal to see all color patterns.
 
     .local/bin/array.bash
       Functions for array manipulation
 
     .local/bin/input.bash
-      Functions to prompt user for input
+      Functions to prompt for user input
 
     .local/bin/bunique.bash
       Functions for temporary files with automatic cleanup
 
+    .local/bin/ppcsv
     .local/bin/csv.bash
-      Functions for comma-separated data.
+      Functions for comma-separated data and a 'pritty-print' script for demonstration.
 
     .local/bin/mutex.bash
       Functions for mutual exclusion
-
-    .local/bin/ppcsv
-      'pritty print' command to demonstrate csv.bash.
 
     .local/bin/search
     .config/search/defaults.setopt
@@ -106,7 +107,7 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
       Modify default options to your needs.
 
     .local/bin/viconfig
-      Demonstrates command completion to help editing files under ~/config
+      Demonstrates command completion to help editing files under ~/.config
 ## Dependencies and requirements
 Should work with Bash 4.3 or higher.
 Path ~/.local/bin must be in $PATH.
