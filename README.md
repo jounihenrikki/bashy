@@ -44,7 +44,7 @@ Example: create script skeleton ~/bin/myscript and add a compspec for the curren
 Inspired by 'XDG Base Directory Specification', multiple configuration base paths are supported
 
 ## Installation
-1. Extract the package to your home folder with unzip
+1. Extract the package in your home folder with unzip
 2. Run **~/.config/bashy/install.sh** or manually add 'source .config/bashyrc' to you .bashrc file
 3. Run **source ~/.config/bashyrc** (or relogin).
 
