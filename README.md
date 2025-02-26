@@ -103,19 +103,19 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
 
     .local/bin/viconfig
       Demonstrates command completion to help editing files under ~/.config
-## Help commands
-    **bashy help** [ __library__.bash ]
+## Helpful commands
+    bashy help [ __library__.bash ]
       for help on function libraries in ~/bin. or main library bashy.bash if argument is omitted.
 
-    **bashy sekelton-with-comments** [ __filename__ ]
-    **bashyrc.complete-refresh**
-      Create you first script skeleton with helpful comments in ~/bin
-      bashyrc.complete-refresh adds a compspec for the command
+    bashy sekelton-with-comments [ __filename__ ]
+    bashyrc.complete-refresh
+      Create you first script skeleton with comments in ~/bin
+      Run bashyrc.complete-refresh to add a compspec for the command in current shell
 
-    __command__ --help
-      Scripts document themselves. Help option is built-in.
+    <command> --help
+      All scripts document themselves. Help option is built-in.
 
-    **bashyrc.help**
+    bashyrc.help
       function for help on login scripts and configuration
 ## Dependencies and requirements
 Bash 4.4 required, tested also with 5.2.
