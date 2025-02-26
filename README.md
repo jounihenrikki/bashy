@@ -7,7 +7,6 @@ It is also a declaration of some new conventions and practices in shell scriptin
 Bashy-core.zip contains the minimun set of files, the platform to build scripts on. Few additional scripts are added for demonstration and inspiration.
 Scripts are installed under user's home and root access is not required. I have avoided external commands as much as possible so Bashy should be quite portable.
 
-New scripts are created using a template which provides all you need to start with.
 Any ideas and help to support the world conquest are welcome :).
 
 ## Features
@@ -33,9 +32,7 @@ EXIT pseudo signal is trapped for cleanup functions. Script or library can regis
 Scripts can source additional libraries together with main library bashy.bash. A template is provided.
 
 ### Fast script creation
-Example: create script skeleton ~/bin/myscript and add a compspec for the current shell:
-
-  bashy skeleton-with-comments myscript; bashyrc.complete-refresh
+Scripts and function libraries can be easily created using skeletons.
 
 ### Support for multiple configuration paths
 Inspired by 'XDG Base Directory Specification', multiple configuration base paths are supported
