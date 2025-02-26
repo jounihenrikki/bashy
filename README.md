@@ -2,15 +2,12 @@
 https://www.urbandictionary.com/define.php?term=bashy
 
 Bashy is scripting environment for user-friendly scripts.
-It is also a declaration of new conventions and look-and-feel in shell scripting.
-
-Long command line options with command completion are the most useful features and the soul of Bashy, look into those first.
+It is also a declaration of some new conventions and practices in shell scripting.
 
 Bashy-core.zip contains the minimun set of files, the platform to build scripts on. Few additional scripts are added for demonstration and inspiration.
 Scripts are installed under user's home and root access is not required. I have avoided external commands as much as possible so Bashy should be quite portable.
 
-Your new scripts are created using a template which provides all you need to start with.
-
+New scripts are created using a template which provides all you need to start with.
 Any ideas and help to support the world conquest are welcome :).
 
 ## Features
@@ -38,7 +35,7 @@ Scripts can source additional libraries together with main library bashy.bash. A
 ### Fast script creation
 Example: create script skeleton ~/bin/myscript and add a compspec for the current shell:
 
-  bashy skeleton myscript; bashyrc.complete-refresh
+  bashy skeleton-with-comments myscript; bashyrc.complete-refresh
 
 ### Support for multiple configuration paths
 Inspired by 'XDG Base Directory Specification', multiple configuration base paths are supported
@@ -52,23 +49,21 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
 ### Mandatory login script
     .config/bashyrc
       Source this from ~/.bashrc or let 'bashy install' to install the hook.
-      Once sourced, some help can be printed with bashyrc.help command.
 ### Mandatory source files
     .local/bin/bashy.bash
-      Bashy basic environment and functions. See 'bashy help'.
+      Bashy basic environment and functions.
 
     .local/bin/complete.bash
-      Functions for command line completion. See 'bashy help complete.bash'
+      Functions for command line completion.
 
     .local/bin/setopt.bash
-      Functions for command line option handling. See 'bashy help setopt.bash.
+      Functions for command line option handling.
 
     .local/bin/validate.bash
-      Generic functions for datatype validation used also by setopt.bash. See 'bashy help validate.bash'.
+      Generic functions for datatype validation used also by setopt.bash.
 ### Essential executables
     .local/bin/bashy
-      Companion tool for help and templates for scripts and libraries. See 'bashy --help'.
-      Create your first Bashy script with 'bashy skeleton-with-comments myscript'
+      Companion tool for help and templates for scripts and libraries.
 
     .local/bin/bashy-logadm
     .local/bin/bashy-logs
@@ -78,8 +73,7 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
       Install or uninstall Bashy hook in ~/.bashrc
 ### Extras for demostration and inspiration
     .local/bin/color.bash
-      Functions for terminal colors. Not mandatory but recommended
-      Automatically used for error prompts etc. if found
+      Functions for terminal colors. Not mandatory but will be automatically used for error prompts etc. if found.
 
     .local/bin/color-cubes
     .config/color/color-names
@@ -109,6 +103,20 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
 
     .local/bin/viconfig
       Demonstrates command completion to help editing files under ~/.config
+## Help commands
+    **bashy help** [ __library__.bash ]
+      for help on function libraries in ~/bin. or main library bashy.bash if argument is omitted.
+
+    **bashy sekelton-with-comments** [ __filename__ ]
+    **bashyrc.complete-refresh**
+      Create you first script skeleton with helpful comments in ~/bin
+      bashyrc.complete-refresh adds a compspec for the command
+
+    __command__ --help
+      Scripts document themselves. Help option is built-in.
+
+    **bashyrc.help**
+      function for help on login scripts and configuration
 ## Dependencies and requirements
 Bash 4.4 required, tested also with 5.2.
 Path ~/.local/bin must be in $PATH.
