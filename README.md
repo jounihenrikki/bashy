@@ -70,12 +70,11 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
       Install or uninstall Bashy hook in ~/.bashrc
 ### Extras for demostration and inspiration
     .local/bin/color.bash
-      Functions for terminal colors. Not mandatory but will be automatically used for error prompts etc. if found.
+      Functions for terminal colors. Will be automatically used by bashy.error() etc. when found.
 
     .local/bin/color-cubes
     .config/color/color-names
-      Demo script providing some information on terminal colors.
-      Enable 256 colors in your terminal to see all color patterns.
+      Script providing some information on terminal colors. Enable 256 colors in your terminal to see all color patterns.
 
     .local/bin/array.bash
       Functions for array manipulation
