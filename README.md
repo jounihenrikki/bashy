@@ -74,7 +74,8 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
 
     .local/bin/color-cubes
     .config/color/color-names
-      Script providing some information on terminal colors. Enable 256 colors in your terminal to see all color patterns.
+      Script providing some information on terminal colors.
+      Enable 256 colors in your terminal to see all color patterns.
 
     .local/bin/array.bash
       Functions for array manipulation
@@ -99,7 +100,7 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
 
     .local/bin/viconfig
       Demonstrates command completion to help editing files under ~/.config
-## Helpful commands
+### Help commands
     bashy help [ __library__.bash ]
       for help on function libraries in ~/bin. or main library bashy.bash if argument is omitted.
 
