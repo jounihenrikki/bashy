@@ -9,10 +9,10 @@ Scripts are installed under user's home and root access is not required. I have 
 
 ## Features
 ### Long command line options
-Long command line options with strongly typed and validated option arguments parsed in normal getopts loop. Common options like --help are built-in.
+Long command line options with strongly typed option arguments parsed in normal getopts loop. Common options like --help are built-in.
 
 ### Command completion
-Instant completion for command line options, option arguments and positional parameters. No configuration outside scripts is needed.
+Completion for command line options, enumerated option arguments and positional parameters. No configuration outside scripts is needed.
 
 ### Error handling
 Best practices for error handling. Bash ERR pseudo signal can trigger backtrace for debugging.
@@ -25,9 +25,6 @@ Generic --debug= command line option. Debug options can be registered in library
 
 ### Housekeeping
 EXIT pseudo signal is trapped for cleanup functions. Script or library can register functions to be run on exit.
-
-### Custom libraries
-Scripts can source additional libraries together with main library bashy.bash. A template is provided.
 
 ### Fast script creation
 Scripts and function libraries can be easily created using skeletons.
