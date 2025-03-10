@@ -65,7 +65,8 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
     .local/bin/setopt.bash
     .local/bin/validate.bash
     .local/bin/input.bash
-      Source files for Bashy basic environment and functions, functions for command line option handling, datatype validation and user input.
+      Source files for Bashy basic environment and functions, functions for command line option handling,
+      datatype validation and user input.
 
     .config/bashyrc
       Source this from ~/.bashrc or let 'bashy install' to install the hook.
