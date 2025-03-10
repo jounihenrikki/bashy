@@ -38,82 +38,61 @@ Scripts and function libraries can be easily created using skeletons.
 Inspired by 'XDG Base Directory Specification', multiple configuration base paths are supported
 
 ## Installation
-1. Download and extract bashy-core.zip to your home folder
-2. Run **~/.config/bashy/install.sh** or manually add 'source .config/bashyrc' to you .bashrc file
-3. Run **source ~/.config/bashyrc** (or relogin).
+1. Download zip files to you home folder and unzip bashy.zip
+2. For command completion, unzip bashy-complete.zip (optional)
+3. For ANSI color support, unzip bashy-color.zip (optional)
+4. For logging, unzip bashy-log.zip (optional)
+5. Run **~/.config/bashy/install.sh** or manually add 'source .config/bashyrc' to you .bashrc file
+6. Run **source ~/.config/bashyrc** (or relogin).
 
-## Content
-### Mandatory login script
-    .config/bashyrc
-      Source this from ~/.bashrc or let 'bashy install' to install the hook.
-### Mandatory source files
-    .local/bin/bashy.bash
-      Bashy basic environment and functions.
-
-    .local/bin/complete.bash
-      Functions for command line completion.
-
-    .local/bin/setopt.bash
-      Functions for command line option handling.
-
-    .local/bin/validate.bash
-      Generic functions for datatype validation used also by setopt.bash.
-### Essential executables
-    .local/bin/bashy
-      Companion tool for help and templates for scripts and libraries.
-
-    .local/bin/bashy-logadm
-    .local/bin/bashy-logs
-      View and manage Bashy logs
-
-    .config/bashy/install.sh
-      Install or uninstall Bashy hook in ~/.bashrc
-### Extras for demostration and inspiration
-    .local/bin/color.bash
-      Functions for terminal colors. Will be automatically used by bashy.error() etc. when found.
-
-    .local/bin/color-cubes
-    .config/color/color-names
-      Script providing some information on terminal colors.
-      Enable 256 colors in your terminal to see all color patterns.
-
-    .local/bin/array.bash
-      Functions for array manipulation
-
-    .local/bin/input.bash
-      Functions to prompt for user input
-
-    .local/bin/bunique.bash
-      Functions for temporary files with automatic cleanup
-
-    .local/bin/ppcsv
-    .local/bin/csv.bash
-      Functions for comma-separated data and a 'pritty-print' script for demonstration.
-
-    .local/bin/mutex.bash
-      Functions for mutual exclusion
-
-    .local/bin/search
-    .config/search/defaults.setopt
-      Search'n'replace tool with extensive set of command line options.
-      Modify default options to your needs.
-
-    .local/bin/viconfig
-      Demonstrates command completion to help editing files under ~/.config
-### Help commands
+## To get help
     bashy help [ __library__.bash ]
       for help on function libraries in ~/bin. or main library bashy.bash if argument is omitted.
 
     bashy sekelton-with-comments [ __filename__ ]
-    bashyrc.complete-refresh
       Create you first script skeleton with comments in ~/bin
-      Run bashyrc.complete-refresh to add a compspec for the command in current shell
 
     <command> --help
       All scripts document themselves. Help option is built-in.
 
     bashyrc.help
-      function for help on login scripts and configuration
+        Help on functions for interactive use
+## Content in bashy.zip
+    .local/bin/bashy
+      Tool for help and templates for scripts and libraries.
+
+    .local/bin/bashy.bash
+    .local/bin/setopt.bash
+    .local/bin/validate.bash
+    .local/bin/input.bash
+      Source files for Bashy basic environment and functions, functions for command line option handling, datatype validation and user input.
+
+    .config/bashyrc
+      Source this from ~/.bashrc or let 'bashy install' to install the hook.
+
+    .config/bashy/*
+      Install script and configuration for .local/bin/bashy
+### Files in bashy-complete.zip
+    .local/bin/complete.bash
+      Functions for command line completion.
+
+    .config/bashyrc.d/0bashyrc-complete.bash
+      Initializes command completion on logon. Automatically sourced by .config/bashyrc
+### Files in bashy-log.zip
+    .local/bin/bashy-logadm
+    .local/bin/bashy-logs
+      View and manage Bashy logs
+
+    .local/bin/log.bash
+      Adds logging to scripts
+## Files in bashy-color.bash
+    .local/bin/color.bash
+      Functions for ANSI colors. Will be automatically sourced and used by bashy.error() etc. when found.
+
+    .local/bin/color-cubes
+    .config/color/color-names
+      Script providing some information on terminal colors.
+      Enable 256 colors in your terminal to see all color patterns.
 ## Dependencies and requirements
 Bash 4.4 required, tested also with 5.2.
 Path ~/.local/bin must be in $PATH.
