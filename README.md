@@ -4,10 +4,8 @@ https://www.urbandictionary.com/define.php?term=bashy
 Bashy is scripting environment for user-friendly scripts.
 It is also a declaration of some new conventions and practices in shell scripting.
 
-Bashy-core.zip contains the minimun set of files, the platform to build scripts on. Few additional scripts are added for demonstration and inspiration.
+Bashy.zip contains the minimun set of files, the "platform" to build scripts on. Additional zip packages add command line completion, ANSI color support and logging.
 Scripts are installed under user's home and root access is not required. I have avoided external commands as much as possible so Bashy should be quite portable.
-
-Any ideas and help to support the world conquest are welcome :).
 
 ## Features
 ### Long command line options
@@ -65,8 +63,7 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
     .local/bin/setopt.bash
     .local/bin/validate.bash
     .local/bin/input.bash
-      Source files for Bashy basic environment and functions, functions for command line option handling,
-      datatype validation and user input.
+      Source files with functions for basic stuff, command line options, datatype validation and user input.
 
     .config/bashyrc
       Source this from ~/.bashrc or let 'bashy install' to install the hook.
