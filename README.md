@@ -46,10 +46,10 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
 6. Run **source ~/.config/bashyrc** (or relogin).
 
 ## To get help
-    bashy help [ __library__.bash ]
+    bashy help [ <library>.bash ]
       for help on function libraries in ~/bin. or main library bashy.bash if argument is omitted.
 
-    bashy sekelton-with-comments [ __filename__ ]
+    bashy sekelton-with-comments [ <filename> ]
       Create you first script skeleton with comments in ~/bin
 
     <command> --help
