@@ -52,7 +52,8 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
 
     bashyrc.help
         Help on functions for interactive use
-## Content in bashy.zip
+## File content
+### bashy.zip
     .local/bin/bashy
       Tool for help and templates for scripts and libraries.
 
@@ -67,20 +68,20 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
 
     .config/bashy/*
       Install script and configuration for .local/bin/bashy
-### Files in bashy-complete.zip
+### bashy-complete.zip
     .local/bin/complete.bash
       Functions for command line completion.
 
     .config/bashyrc.d/0bashyrc-complete.bash
       Initializes command completion on logon. Automatically sourced by .config/bashyrc
-### Files in bashy-log.zip
+### bashy-log.zip
     .local/bin/bashy-logadm
     .local/bin/bashy-logs
       View and manage Bashy logs
 
     .local/bin/log.bash
       Adds logging to scripts
-## Files in bashy-color.bash
+### bashy-color.bash
     .local/bin/color.bash
       Functions for ANSI colors. Will be automatically sourced and used by bashy.error() etc. when found.
 
@@ -88,6 +89,8 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
     .config/color/color-names
       Script providing some information on terminal colors.
       Enable 256 colors in your terminal to see all color patterns.
+## bashy-util.bash
+    To be documented ... try out yourself
 ## Dependencies and requirements
 Bash 4.4 required, tested also with 5.2.
 Path ~/.local/bin must be in $PATH.
