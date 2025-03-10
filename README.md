@@ -89,7 +89,7 @@ Inspired by 'XDG Base Directory Specification', multiple configuration base path
     .config/color/color-names
       Script providing some information on terminal colors.
       Enable 256 colors in your terminal to see all color patterns.
-## bashy-util.bash
+### bashy-util.bash
     To be documented ... try out yourself
 ## Dependencies and requirements
 Bash 4.4 required, tested also with 5.2.
