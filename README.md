@@ -12,7 +12,7 @@ Scripts are installed under user's home and root access is not required. I have 
 Long command line options with strongly typed option arguments parsed in normal getopts loop. Common options like --help are built-in.
 
 ### Command completion
-Package 'complete' adds completion for command line options, enumerated option arguments and positional parameters. Long command options are powerful but hard to remember. No configuration outside main script is needed.
+Long command options are powerful but hard to remember. Package 'complete' adds completion for command line options, enumerated option arguments and positional parameters. No configuration outside main script is needed.
 
 ### Error handling
 Best practices for error handling. Bash ERR pseudo signal can trigger backtrace for debugging.
