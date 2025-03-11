@@ -1,7 +1,7 @@
 # Bashy
 https://www.urbandictionary.com/define.php?term=bashy
 
-Bashy is scripting environment for user-friendly scripts.
+Bashy is private scripting environment and platform for developer and user-friendly scripts.
 It is also a declaration of some new conventions and practices in shell scripting.
 
 Bashy.zip contains the minimun set of files to build scripts on. Additional zip packages add command line completion, ANSI color support, logging and more.
@@ -12,7 +12,7 @@ Scripts are installed under user's home and root access is not required. I have 
 Long command line options with strongly typed option arguments parsed in normal getopts loop. Common options like --help are built-in.
 
 ### Command completion
-Completion for command line options, enumerated option arguments and positional parameters. No configuration outside scripts is needed.
+Package 'complete' adds completion for command line options, enumerated option arguments and positional parameters. Long command options are powerful but hard to remember. No configuration outside main script is needed.
 
 ### Error handling
 Best practices for error handling. Bash ERR pseudo signal can trigger backtrace for debugging.
@@ -29,16 +29,25 @@ EXIT pseudo signal is trapped for cleanup functions. Script or library can regis
 ### Fast script creation
 Scripts and function libraries can be easily created using skeletons.
 
-### Support for multiple configuration paths
-Inspired by 'XDG Base Directory Specification', multiple configuration base paths are supported
+### ANDI color support
+With 'color' package you see Bashy error messages and command/libary help in color. And of course have possibility to add color in any script.
 
-## Installation
+### Support for multiple configuration paths
+Like 'XDG Base Directory Specification', Bashy support multiple configuration paths. Configurations are read from first matching location.
+
+## To install
 1. Download zip files to you home folder and unzip bashy.zip
-2. For command completion, unzip bashy-complete.zip (optional)
+2. For command completion, unzip bashy-complete.zip (optional but highly recommended!)
 3. For ANSI color support, unzip bashy-color.zip (optional)
 4. For logging, unzip bashy-log.zip (optional)
 5. Run **~/.config/bashy/install.sh** or manually add 'source .config/bashyrc' to you .bashrc file
 6. Run **source ~/.config/bashyrc** (or relogin).
+
+## To uninstall
+1. Uninstall any other than 'bashy' package: bashy uninstall <package>
+2. Remove the hook from .bashyrc: **~/.config/bashy/install.sh -u**
+3. Uninstall base package: bashy uninstall bashy
+4. If you had installed log package, remove logs: rm -rf .local/state/bashy-logs
 
 ## To get help
     bashy help [ <library>.bash ]
