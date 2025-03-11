@@ -9,7 +9,7 @@ Scripts are installed under user's home and root access is not required. I have 
 
 ## Features
 ### Long command line options
-Long command line options with strongly typed option arguments parsed in normal getopts loop. Common options like --help are built-in.
+Long command line options with strongly typed and validated option arguments parsed in normal getopts loop. Common options like --help are built-in.
 
 ### Command completion
 Long command options are powerful but hard to remember. Package 'complete' adds completion for command line options, enumerated option arguments and positional parameters. No configuration outside main script is needed.
