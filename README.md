@@ -6,7 +6,7 @@ It is also a declaration of some new conventions and practices in shell scriptin
 
 Bashy is written in Bash.
 It can be easily deployed to isolated environments propagated to other hosts and users.
-I have avoided external commands as much as possible so Bashy should be quite portable.
+I have avoided external dependencies as much as possible so Bashy should be quite portable.
 Bash 4.4 or higher is required.
 
 Bashy.zip contains the minimun set of files to build scripts on. Additional zip packages add command line completion, ANSI color support, logging and more.
