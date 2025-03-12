@@ -23,7 +23,7 @@ Long command options are powerful but hard to remember. Package 'complete' adds 
 Best practices for error handling. Bash ERR pseudo signal can trigger backtrace for debugging.
 
 ### Logging
-Functions for logging and tools for log housekeeping. All script invocations are logged by default.
+Log database, functions for logging and tools for housekeeping. All script invocations are logged by default.
 
 ### Debugging
 Generic --debug= command line option. Debug options can be registered in library source files or scripts.
@@ -41,18 +41,25 @@ With 'color' package you see Bashy error messages and command/libary help in col
 Like 'XDG Base Directory Specification', Bashy support multiple configuration paths. Configurations are read from first matching location.
 
 ## To install
-1. Download zip files to you home folder and unzip bashy.zip
-2. For command completion, unzip bashy-complete.zip (optional but highly recommended!)
-3. For ANSI color support, unzip bashy-color.zip (optional)
-4. For logging, unzip bashy-log.zip (optional)
-5. Run **~/.config/bashy/install.sh** or manually add 'source .config/bashyrc' to you .bashrc file
-6. Run **source ~/.config/bashyrc** (or relogin).
+1. Copy zip files to you home folder
+2. Unzip bashy.zip
+3. Unzip bashy-complete.zip for command completion (optional but highly recommended)
+4. Unzip bashy-color.zip for ANSI color support (optional)
+5. Unzip bashy-log.zip for logging (optional)
+6. Run **~/.config/bashy/install.sh** or manually add 'source .config/bashyrc' to ~/.bashrc file
+7. Run **source ~/.config/bashyrc** or relogin.
 
 ## To uninstall
-1. Uninstall any other than 'bashy' package: bashy uninstall <package>
-2. Remove the hook from .bashyrc: **~/.config/bashy/install.sh -u**
+1. Uninstall supplemental packages (not 'bashy'): **bashy uninstall <package>**
+2. Remove the hook from ~/.bashyrc: **~/.config/bashy/install.sh -u**
 3. Uninstall base package: bashy uninstall bashy
-4. If you had installed log package, remove logs: rm -rf .local/state/bashy-logs
+4. If you had installed log package, remove logs: **rm -rf ~/.local/state/bashy-logs**
+
+## To propagate set of packages to another user
+1. Pack a collection of packages: **bashy package bashy <package> ...**
+2. Copy: **scp bundle.zip <login>:**
+3. Unzip: **ssh <login> unzip bundle.zip**
+4. Install: **ssh <login> .config/bashy/install.sh**
 
 ## To get help
     bashy help [ <library>.bash ]
