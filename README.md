@@ -4,8 +4,13 @@ https://www.urbandictionary.com/define.php?term=bashy
 Bashy is private scripting environment and platform for developer and user-friendly scripts.
 It is also a declaration of some new conventions and practices in shell scripting.
 
+Bashy is written in Bash.
+It can be easily deployed to environments having no internet access, and as easily propagated to other hosts and users.
+I have avoided external commands as much as possible so Bashy should be quite portable.
+Bash 4.4 or higher is required.
+
 Bashy.zip contains the minimun set of files to build scripts on. Additional zip packages add command line completion, ANSI color support, logging and more.
-Scripts are installed under user's home and root access is not required. I have avoided external commands as much as possible so Bashy should be quite portable.
+Scripts are installed under user's home and root access is not required.
 
 ## Features
 ### Long command line options
@@ -99,10 +104,7 @@ Like 'XDG Base Directory Specification', Bashy support multiple configuration pa
       Script providing some information on terminal colors.
       Enable 256 colors in your terminal to see all color patterns.
 ### bashy-util.bash
-    To be documented ... try out yourself
-## Dependencies and requirements
-Bash 4.4 required, tested also with 5.2.
-Path ~/.local/bin must be in $PATH.
+    Collection of scripts and libraries yet to be documented here. Use 'bashy help' or --help to learn more.
 ## Author
 https://github.com/jounihenrikki/bashy/
 Work is under GNU General Public License [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
