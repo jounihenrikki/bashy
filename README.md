@@ -1,11 +1,11 @@
 # Bashy
 https://www.urbandictionary.com/define.php?term=bashy
 
-Bashy is private scripting environment and platform for developer and user-friendly scripts.
+Bashy is private scripting environment and toolkit for developer- and user-friendly scripting.
 It is also a declaration of some new conventions and practices in shell scripting.
 
 Bashy is written in Bash.
-It can be easily deployed to environments having no internet access, and as easily propagated to other hosts and users.
+It can be easily deployed to isolated environments propagated to other hosts and users.
 I have avoided external commands as much as possible so Bashy should be quite portable.
 Bash 4.4 or higher is required.
 
