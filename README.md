@@ -5,7 +5,7 @@ Bashy is private scripting environment and toolkit for developer- and user-frien
 It is also a declaration of some new conventions and practices in shell scripting.
 
 Bashy is written in Bash.
-It can be easily deployed to isolated environments propagated to other hosts and users.
+It can be easily deployed in isolated environments and further propagated to other hosts and users.
 I have avoided external dependencies as much as possible so Bashy should be quite portable.
 Bash 4.4 or higher is required.
 
