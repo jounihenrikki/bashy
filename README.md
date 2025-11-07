@@ -41,7 +41,7 @@ With 'color' package you see Bashy error messages and command/libary help in col
 Like 'XDG Base Directory Specification', Bashy support multiple configuration paths. Configurations are read from first matching location.
 
 ## To install
-1. Copy zip files to you home folder
+1. Copy zip files to you home folder - or git clone https://github.com/jounihenrikki/bashy.git
 2. Unzip bashy.zip
 3. Unzip bashy-complete.zip for command completion (optional but highly recommended)
 4. Unzip bashy-color.zip for ANSI color support (optional)
