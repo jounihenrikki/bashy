@@ -1,12 +1,10 @@
 # Bashy
 https://www.urbandictionary.com/define.php?term=bashy
 
-Bashy is private scripting environment and toolkit for developer- and user-friendly scripting.
-It is also a declaration of some new conventions and practices in shell scripting.
+Bashy is Bash scripting environment (written in Bash) for user-friendly command-line interfaces.
 
-Bashy is written in Bash.
-It can be easily deployed in isolated environments and further propagated to other hosts and users.
-I have avoided external dependencies as much as possible so Bashy should be quite portable.
+Bashy libraries are installed to user's home and can be easily deployed in isolated appliances and propagated to other hosts and users.
+
 Bash 4.4 or higher is required.
 
 Bashy.zip contains the minimun set of files to build scripts on. Additional zip packages add command line completion, ANSI color support, logging and more.
@@ -14,10 +12,10 @@ Scripts are installed under user's home and root access is not required.
 
 ## Features
 ### Long command line options
-Long command line options with strongly typed and validated option arguments parsed in normal getopts loop. Common options like --help are built-in.
+Long command line options with strongly typed and validated option arguments parsed in normal getopts loop. Some common options like --help are built-in.
 
 ### Command completion
-Long command options are powerful but hard to remember. Package 'complete' adds completion for command line options, enumerated option arguments and positional parameters. No configuration outside main script is needed.
+Package 'complete' adds completion for command line options, enumerated option arguments and positional parameters. No configuration outside main script is needed.
 
 ### Error handling
 Best practices for error handling. Bash ERR pseudo signal can trigger backtrace for debugging.
