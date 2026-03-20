@@ -3,28 +3,27 @@ https://www.urbandictionary.com/define.php?term=bashy
 
 Bashy is Bash scripting environment (written in Bash) for user-friendly command-line interfaces.
 
-Bashy libraries are installed to user's home and can be easily deployed in isolated appliances and propagated to other hosts and users.
+Bashy libraries are installed to user's home and can be easily deployed even to isolated appliances.
 
 Bash 4.4 or higher is required.
 
-Bashy.zip contains the minimun set of files to build scripts on. Additional zip packages add command line completion, ANSI color support, logging and more.
-Scripts are installed under user's home and root access is not required.
+Bashy.zip contains the minimun set of files to build scripts on. Additional zip packages add command line completion, ANSI color support, logging etc.
 
 ## Features
 ### Long command line options
 Long command line options with strongly typed and validated option arguments parsed in normal getopts loop. Some common options like --help are built-in.
 
 ### Command completion
-Package 'complete' adds completion for command line options, enumerated option arguments and positional parameters. No configuration outside main script is needed.
+Package 'bashy-complete' adds completion for command line options, enumerated option arguments and positional parameters. No configuration outside main script is needed.
 
 ### Error handling
 Best practices for error handling. Bash ERR pseudo signal can trigger backtrace for debugging.
 
 ### Logging
-Log database, functions for logging and tools for housekeeping. All script invocations are logged by default.
+Comes with optional 'bashy-log' package. Log database, functions for logging and tools for inspecting logs and housekeeping them. All script invocations are logged by default.
 
 ### Debugging
-Generic --debug= command line option. Debug options can be registered in library source files or scripts.
+Generic --debug= command line option. Debug options can be registered and easily used in scripts.
 
 ### Housekeeping
 EXIT pseudo signal is trapped for cleanup functions. Script or library can register functions to be run on exit.
