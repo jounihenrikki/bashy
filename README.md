@@ -3,7 +3,7 @@ https://www.urbandictionary.com/define.php?term=bashy
 
 Bashy is Bash scripting environment (written in Bash) for user-friendly command-line interfaces.
 
-Bashy libraries are installed to user's home and can be easily deployed even to isolated appliances.
+Bashy libraries are installed to user's home and can be easily deployed to isolated appliances with minimal footprint.
 
 Bash 4.4 or higher is required.
 
@@ -47,7 +47,7 @@ Like 'XDG Base Directory Specification', Bashy support multiple configuration pa
 7. Run **source ~/.config/bashyrc** or relogin.
 
 ## To uninstall
-1. Uninstall supplemental packages (not 'bashy'): **bashy uninstall <package>**
+1. Uninstall supplemental packages (all except 'bashy'): **bashy uninstall <package>**
 2. Remove the hook from ~/.bashyrc: **~/.config/bashy/install.sh -u**
 3. Uninstall base package: bashy uninstall bashy
 4. If you had installed log package, remove logs: **rm -rf ~/.local/state/bashy-logs**
