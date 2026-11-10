@@ -25,7 +25,7 @@ EXIT pseudo signal is trapped for cleanup functions. Script or library can regis
 ### Fast script creation
 Scripts and function libraries can be easily created using skeletons.
 
-### ANDI color support
+### ANSI color support
 With 'color' package you see Bashy error messages and command/libary help in color. And of course have possibility to add color in any script.
 
 ### Support for multiple configuration paths
