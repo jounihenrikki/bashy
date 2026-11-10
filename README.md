@@ -55,55 +55,44 @@ Bashy libraries are installed under user's home.
 
 ## To get help
     bashy help [ <library>.bash ]
-      for help on function libraries in ~/bin. or main library bashy.bash if argument is omitted.
-
+      For help on function libraries in ~/bin. or main library bashy.bash if argument is omitted.
     bashy sekelton-with-comments [ <filename> ]
-      Create you first script skeleton with comments in ~/bin
-
+       Create you first script skeleton with comments in ~/bin
     <command> --help
-      All scripts document themselves. Help option is built-in.
-
+       All scripts document themselves. Help option is built-in.
     bashyrc.help
         Help on functions for interactive use
 ## File content
 ### bashy.zip
     .local/bin/bashy
       Tool for help and templates for scripts and libraries.
-
-    .local/bin/bashy.bash
-    .local/bin/setopt.bash
-    .local/bin/validate.bash
-    .local/bin/input.bash
+    .local/bin/bashy.bash .local/bin/setopt.bash .local/bin/validate.bash .local/bin/input.bash
       Source files with functions for basic stuff, command line options, datatype validation and user input.
-
     .config/bashyrc
       Source this from ~/.bashrc or let 'bashy install' to install the hook.
-
     .config/bashy/*
       Install script and configuration for .local/bin/bashy
 ### bashy-complete.zip
     .local/bin/complete.bash
       Functions for command line completion.
-
     .config/bashyrc.d/0bashyrc-complete.bash
       Initializes command completion on logon. Automatically sourced by .config/bashyrc
 ### bashy-log.zip
-    .local/bin/bashy-logadm
-    .local/bin/bashy-logs
+    .local/bin/bashy-logs .local/bin/bashy-logadm
       View and manage Bashy logs
-
     .local/bin/log.bash
       Adds logging to scripts
 ### bashy-color.bash
     .local/bin/color.bash
       Functions for ANSI colors. Will be automatically sourced and used by bashy.error() etc. when found.
-
-    .local/bin/color-cubes
     .config/color/color-names
       Script providing some information on terminal colors.
       Enable 256 colors in your terminal to see all color patterns.
+    .local/bin/color-cubes
+      Color demo
 ### bashy-util.bash
     Collection of scripts and libraries yet to be documented here. Use 'bashy help' or --help to learn more.
 ## Author
-https://github.com/jounihenrikki/bashy/
-Work is under GNU General Public License [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
+https://github.com/jounihenrikki/bashy/\
+Work is under GNU General Public License [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)\
+Readme file was partly written by AI.
