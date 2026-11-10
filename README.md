@@ -1,7 +1,7 @@
 # Bashy
 Framework for Bash scripting, written in Bash.
 
-
+Bashy is a modular, lightweight scripting framework designed to bring high-level application structure, robust error handling, and user-friendly CLI features natively to Bash 4.4+ without introducing external runtime dependencies.
 
 ## Features
 ### Long command line options
