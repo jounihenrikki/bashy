@@ -1,13 +1,7 @@
 # Bashy
-https://www.urbandictionary.com/define.php?term=bashy
+Framework for Bash scripting, written in Bash.
 
-Bashy is Bash scripting environment (written in Bash) for user-friendly command-line interfaces.
 
-Bashy libraries are installed to user's home and can be easily deployed to isolated appliances with minimal footprint.
-
-Bash 4.4 or higher is required.
-
-Bashy.zip contains the minimun set of files to build scripts on. Additional zip packages add command line completion, ANSI color support, logging etc.
 
 ## Features
 ### Long command line options
@@ -38,6 +32,7 @@ With 'color' package you see Bashy error messages and command/libary help in col
 Like 'XDG Base Directory Specification', Bashy support multiple configuration paths. Configurations are read from first matching location.
 
 ## To install
+Bashy libraries are installed under user's home.
 1. Copy zip files to you home folder - or git clone https://github.com/jounihenrikki/bashy.git
 2. Unzip bashy.zip
 3. Unzip bashy-complete.zip for command completion (optional but highly recommended)
@@ -47,12 +42,12 @@ Like 'XDG Base Directory Specification', Bashy support multiple configuration pa
 7. Run **source ~/.config/bashyrc** or relogin.
 
 ## To uninstall
-1. Uninstall supplemental packages (all except 'bashy'): **bashy uninstall <package>**
-2. Remove the hook from ~/.bashyrc: **~/.config/bashy/install.sh -u**
-3. Uninstall base package: bashy uninstall bashy
-4. If you had installed log package, remove logs: **rm -rf ~/.local/state/bashy-logs**
+1. Uninstall supplemental packages (all except 'bashy'): **bashy uninstall bashy-\<package\>**
+2. Remove the hook from \~/.bashyrc  **~/.config/bashy/install.sh -u**
+3. Uninstall base package: **bashy uninstall bashy**
+4. Clean possible logs: **rm -rf ~/.local/state/bashy-logs**
 
-## To propagate set of packages to another user
+## To propagate set of packages to another user or appliance
 1. Pack a collection of packages: **bashy package bashy <package> ...**
 2. Copy: **scp bundle.zip <login>:**
 3. Unzip: **ssh <login> unzip bundle.zip**
