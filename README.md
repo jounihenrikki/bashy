@@ -54,7 +54,7 @@ Bashy libraries are installed under user's home by default.\
 ```
 ## Uninstallation
 1. Uninstall optional packages (all except 'bashy')
-2. Remove the hook manually from \~/.bashyrc or by using the script
+2. Remove the hook manually from \~/.bashyrc or use the script
 3. Uninstall 'bashy' base package
 4. Delete logs if you had log.bash installed
 ```console
@@ -73,10 +73,10 @@ Pack a collection of packages. Copy zip to remote host or user, unzip and instal
 ```
 ## To get help
 ```console
-    $ bashy help [<library>.bash] # Get help on library in ~/.local/bin. or bashy.bash by default.
-    $ bashy sekelton-with-comments [<filename>] # Create script skeleton with comments in ~/.local/bin
-    $ <command> --help # All scripts document themselves, help option is built-in.
-    $ bashyrc.help # Help on functions for interactive use
+    $ bashy help [<library>.bash] # Get help on ~/.local/bin/*.bash libraries.
+    $ bashy sekelton-with-comments <filename> # Create script ~/.local/bin/<filename> with comments
+    $ <bashy-command> --help # All scripts document themselves, help option is built-in.
+    $ bashyrc.help # Brief help on login files and some functions in login shell
 ```
 ---
 
