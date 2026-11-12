@@ -3,96 +3,92 @@ Framework for Bash scripting, written in Bash.
 
 Bashy is a modular, lightweight scripting framework designed to bring high-level application structure, robust error handling, and user-friendly CLI features natively to Bash 4.4+ without introducing external runtime dependencies.
 
-## Features
-### Long command line options
-Long command line options with strongly typed and validated option arguments parsed in normal getopts loop. Some common options like --help are built-in.
+---
 
-### Command completion
-Package 'bashy-complete' adds completion for command line options, enumerated option arguments and positional parameters. No configuration outside main script is needed.
+## Components and features
+### 1. Core Framework (`bashy.zip`)
+The foundation of the environment establishes key paradigms for robust, production-grade scripting:
+* **`bashy.bash`**, **`setopt.bash`**, **`validate.bash`**, **`input.bash`**: These modules address traditional Bash shortcomings by providing strongly typed option parsing, robust argument validation, and structured user input handling. By mimicking standard library behaviors found in higher-level languages (like Python or Go), they prevent scripts from failing silently due to malformed inputs.
+* **Exit and Error Traps**: The framework leverages Bash's `ERR` pseudo-signal for automated backtracing/debugging and traps the `EXIT` pseudo-signal for registered housekeeping and cleanup routines. This ensures that system resources are cleaned up properly even if a script terminates unexpectedly.
+* **Configuration Portability**: Adheres to modern standards (akin to the XDG Base Directory Specification) by supporting multiple configuration fallback paths. Configurations adapt cleanly across diverse environments without hardcoding absolute system paths.
 
-### Error handling
-Best practices for error handling. Bash ERR pseudo signal can trigger backtrace for debugging.
+---
 
-### Logging
-Comes with optional 'bashy-log' package. Log database, functions for logging and tools for inspecting logs and housekeeping them. All script invocations are logged by default.
+### 2. Command Line Completion (`bashy-complete.zip`)
+* **`complete.bash`**: Introduces dynamic command-line completion for options, enumerated arguments, and positional parameters without requiring external configuration files outside the script itself. For embedded devices or minimal appliances like home routers, having self-contained completion logic embedded directly in the script structure keeps overhead minimal.
 
-### Debugging
-Generic --debug= command line option. Debug options can be registered and easily used in scripts.
+---
 
-### Housekeeping
-EXIT pseudo signal is trapped for cleanup functions. Script or library can register functions to be run on exit.
+### 3. Logging and Housekeeping (`bashy-log.zip`)
+* **`log.bash`**, **`bashy-logadm`**, **`bashy-logs`**: Introduces a lightweight log database and management utilities. Capturing script invocations by default provides crucial audit trails and diagnostics on headless or isolated appliances where interactive debugging can be difficult.
 
-### Fast script creation
-Scripts and function libraries can be easily created using skeletons.
+---
 
-### ANSI color support
-With 'color' package you see Bashy error messages and command/libary help in color. And of course have possibility to add color in any script.
+### 4. Terminal Presentation (`bashy-color.bash`)
+* **`color.bash`**: Provides clean ANSI color abstraction that automatically hooks into error messaging (`bashy.error()`) and command help output when detected. It improves CLI readability while remaining lightweight.
 
-### Support for multiple configuration paths
-Like 'XDG Base Directory Specification', Bashy support multiple configuration paths. Configurations are read from first matching location.
+---
 
-## To install
-Bashy libraries are installed under user's home.
-1. Copy zip files to you home folder - or git clone https://github.com/jounihenrikki/bashy.git
-2. Unzip bashy.zip
-3. Unzip bashy-complete.zip for command completion (optional but highly recommended)
-4. Unzip bashy-color.zip for ANSI color support (optional)
-5. Unzip bashy-log.zip for logging (optional)
-6. Run **~/.config/bashy/install.sh** or manually add 'source .config/bashyrc' to ~/.bashrc file
-7. Run **source ~/.config/bashyrc** or relogin.
+### 5. Additional stuff (`bashy-util.bash`)
+* **`array.bash`**: High-level array manipulations.
+* **`csv.bash`** / **`ppcsv`**: Native CSV parsing and pretty-printing.
+* **`mutex.bash`**: File-based mutual exclusion and concurrency control.
+* **`bunique.bash`**: Wrapper for mktemp(1). With EXIT hook to automatically delete temporary files on exit.
+* *Note:* The `mutex.bash` library is particularly valuable in resource-constrained environments (such as background cron jobs) to prevent race conditions and duplicate process execution.
 
-## To uninstall
-1. Uninstall supplemental packages (all except 'bashy'): **bashy uninstall bashy-\<package\>**
-2. Remove the hook from \~/.bashyrc  **~/.config/bashy/install.sh -u**
-3. Uninstall base package: **bashy uninstall bashy**
-4. Clean possible logs: **rm -rf ~/.local/state/bashy-logs**
+---
 
+## Installation
+Bashy libraries are installed under user's home by default.\
+1. First clone the repo or copy the zip files to any folder
+2. Use the install script or source .config/bashyrc' from ~/.bashrc
+3. Source bashyrc manually to current shell (or relogin) and you're ready to go
+```console
+    $ git clone https://github.com/jounihenrikki/bashy.git
+    $ unzip bashy.zip
+    $ unzip bashy-complete.zip # for command completion (optional but highly recommended)
+    $ unzip bashy-color.zip # for ANSI color support (optional)
+    $ unzip bashy-log.zip # for logging (optional)
+    $ ~/.config/bashy/install.sh # install hook to .bashrc
+    $ source ~/.config/bashyrc # or relogin
+```
+## Uninstallation
+1. Uninstall optional packages (all except 'bashy')
+2. Remove the hook manually from \~/.bashyrc or by using the script
+3. Uninstall 'bashy' base package
+4. Delete logs if you had log.bash installed
+```console
+    $ bashy uninstall bashy-<package> # do for each package (use command completion!)
+    $ ~/.config/bashy/install.sh -u
+    $ bashy uninstall bashy
+    $ rm -rf ~/.local/state/bashy-logs
+```
 ## To propagate set of packages to another user or appliance
-1. Pack a collection of packages: **bashy package bashy <package> ...**
-2. Copy: **scp bundle.zip <login>:**
-3. Unzip: **ssh <login> unzip bundle.zip**
-4. Install: **ssh <login> .config/bashy/install.sh**
-
+Pack a collection of packages. Copy zip to remote host or user, unzip and install
+```console
+    $ bashy package bashy <package> ...
+    $ scp bundle.zip <login>:
+    $ ssh <login> unzip bundle.zip
+    $ ssh <login> .config/bashy/install.sh
+```
 ## To get help
-    bashy help [ <library>.bash ]
-      For help on function libraries in ~/bin. or main library bashy.bash if argument is omitted.
-    bashy sekelton-with-comments [ <filename> ]
-       Create you first script skeleton with comments in ~/bin
-    <command> --help
-       All scripts document themselves. Help option is built-in.
-    bashyrc.help
-        Help on functions for interactive use
-## File content
-### bashy.zip
-    .local/bin/bashy
-      Tool for help and templates for scripts and libraries.
-    .local/bin/bashy.bash .local/bin/setopt.bash .local/bin/validate.bash .local/bin/input.bash
-      Source files with functions for basic stuff, command line options, datatype validation and user input.
-    .config/bashyrc
-      Source this from ~/.bashrc or let 'bashy install' to install the hook.
-    .config/bashy/*
-      Install script and configuration for .local/bin/bashy
-### bashy-complete.zip
-    .local/bin/complete.bash
-      Functions for command line completion.
-    .config/bashyrc.d/0bashyrc-complete.bash
-      Initializes command completion on logon. Automatically sourced by .config/bashyrc
-### bashy-log.zip
-    .local/bin/bashy-logs .local/bin/bashy-logadm
-      View and manage Bashy logs
-    .local/bin/log.bash
-      Adds logging to scripts
-### bashy-color.bash
-    .local/bin/color.bash
-      Functions for ANSI colors. Will be automatically sourced and used by bashy.error() etc. when found.
-    .config/color/color-names
-      Script providing some information on terminal colors.
-      Enable 256 colors in your terminal to see all color patterns.
-    .local/bin/color-cubes
-      Color demo
-### bashy-util.bash
-    Collection of scripts and libraries yet to be documented here. Use 'bashy help' or --help to learn more.
+```console
+    $ bashy help [<library>.bash] # Get help on library in ~/.local/bin. or bashy.bash by default.
+    $ bashy sekelton-with-comments [<filename>] # Create script skeleton with comments in ~/.local/bin
+    $ <command> --help # All scripts document themselves, help option is built-in.
+    $ bashyrc.help # Help on functions for interactive use
+```
+---
+
+## Summary of Strengths for Appliance Deployment (as analyzed by AI)
+
+1. **Zero External Language Dependencies**: Written entirely in native Bash 4.4+, avoiding the overhead of installing Python, Perl, Node.js, or compiled runtimes on space-constrained Flash storage.
+2. **Seamless Packaging & Propagation**: The modular `bashy package` utility allows developers to bundle scripts and libraries into tiny zip archives, enabling rapid deployment via standard network tools (`scp`/`ssh`).
+3. **Defensive Scripting Design**: Built-in data validation, automatic exception trapping, and systematic cleanup traps reduce the likelihood of leaving an unattended edge device in an inconsistent state.
+
+---
+
 ## Author
 https://github.com/jounihenrikki/bashy/\
 Work is under GNU General Public License [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)\
-Readme file was partly written by AI.
+Introduction part of README is mostly written by AI.
