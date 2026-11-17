@@ -40,9 +40,10 @@ The foundation of the environment establishes key paradigms for robust, producti
 
 ## Installation
 Bashy libraries are installed under user's home by default.\
-1. First clone the repo or copy the zip files to any folder
-2. Use the install script or source .config/bashyrc' from ~/.bashrc
-3. Source bashyrc manually to current shell (or relogin) and you're ready to go
+1. Clone the repository or copy the zip files to any folder
+2. Unzip in your home directory
+3. Use the install script or source .config/bashyrc' from ~/.bashrc
+4. Source bashyrc manually to current shell (or relogin) and you're ready to go
 ```console
     $ git clone https://github.com/jounihenrikki/bashy.git
     $ unzip bashy.zip
